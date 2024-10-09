@@ -17,7 +17,7 @@ import Stats from './components/Stats.vue';
           Существует много вариаций Lorem Ipsum, <br />
           которые можно использовать
         </p>
-        <button>Начать</button>
+        <button><span>Начать</span><span class="button-arrow"></span></button>
       </div>
     </div>
     <ProjectCatalog/>
