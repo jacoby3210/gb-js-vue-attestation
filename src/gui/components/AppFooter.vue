@@ -31,4 +31,20 @@
 </template>
 
 <style scoped>
+#footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+
+  margin-top: 33px;
+  height: 390px;
+}
+
+#footer > * {
+  display: flex;
+  flex-direction: column;
+  width: 260px;
+}
+
+.footer-header {font-size: 25px;}
 </style>

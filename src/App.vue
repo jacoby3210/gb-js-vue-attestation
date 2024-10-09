@@ -1,6 +1,6 @@
 <script setup>
-  import AppHeader from './gui/common/AppHeader.vue'
-  import AppFooter from './gui/common/AppFooter.vue'
+  import AppHeader from './gui/components/AppHeader.vue'
+  import AppFooter from './gui/components/AppFooter.vue'
   import '../src/assets/themes/theme.css';
 
 </script>

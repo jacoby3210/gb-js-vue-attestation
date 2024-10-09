@@ -9,9 +9,9 @@
       <span class="logo-title">Interno</span>
     </div>
     <nav id="main-nav">
-      <a href="#">Домой</a>
-      <a href="#">Проект</a>
-      <a href="#">Блог</a>
+      <router-link to="/">Домой</router-link>
+      <router-link to="/">Проект</router-link>
+      <router-link to="/blog">Блог</router-link>
     </nav>
   </header>
 </template>

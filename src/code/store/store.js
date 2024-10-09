@@ -5,6 +5,15 @@ export default createStore({
   state: {
     articles: [
       {
+        id: 0,
+        category: "Дизайн кухни",
+        datestamp: "26 Декабрь,2022",
+        image: "./resources/images/article-00.png",
+        title: "Последний пост",
+        subtitle: "Low Cost Latest Invented Interior Designing Ideas",
+        text: "С того времени этот, похожий на латинский, текст стал стандартом в печатной промышленности для примеров шрифтов и текстов. Перед появлением электронных издательств дизайнеры импровизировали в работе над макетами, изображая текст при помощи волнистых линий. С появлением самоклеющихся наклеек с напечатанным текстом «Lorem ipsum» появился более реалистичный способ обозначения расположения текста на странице.",
+      },
+      {
         id: 1,
         category: "Дизайн кухни",
         datestamp: "26 Декабрь,2022",
@@ -20,6 +29,27 @@ export default createStore({
       },
       {
         id: 3,
+        category: "Дизайн интерьера",
+        datestamp: "25 Декабрь,2022",
+        image: "./resources/images/article-03.png",
+        title: "Лучшие интерьерные решения для офисов ",
+      },
+      {
+        id: 4,
+        category: "Дизайн кухни",
+        datestamp: "26 Декабрь,2022",
+        image: "./resources/images/article-01.png",
+        title: "Создадим лучший макет перепланировки",
+      },
+      {
+        id: 5,
+        category: "Дизайн для жизни",
+        datestamp: "22 Декабрь,2022",
+        image: "./resources/images/article-02.png",
+        title: "Лучшие интерьерные идеи по низкой цене",
+      },
+      {
+        id: 6,
         category: "Дизайн интерьера",
         datestamp: "25 Декабрь,2022",
         image: "./resources/images/article-03.png",
