@@ -1,0 +1,311 @@
+/* Сброс стилей и базовая настройка */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #f4f4f4;
+  color: #333;
+  background-color: white;
+}
+
+a {color:black; text-decoration: none; }
+a:hover { color: inherit;  text-decoration:underline; }
+h3 {font-size: 50px;}
+p {font-size: 22px;}
+
+.button-go {
+  
+  padding: 10px;
+  height: 70px;
+  width: 70px;
+
+  background-color: transparent;
+  background-image: url(/src/assets/images/button-go.png);
+  background-size: 100%;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  cursor: pointer;
+}
+.content {padding:  0px 350px;}
+.content-header {
+  display: flex; 
+  flex-direction: column; 
+  text-align: center; 
+  gap: 10px;
+}
+
+/* header, footer, main > * {padding:  0px 350px;} */
+
+main {
+  display: flex;
+  flex-direction: column;
+  gap: 100px;
+}
+
+/* Стили для заголовка */
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 150px;
+}
+
+/* Стили для логотипа */
+
+.logo-container {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+} 
+
+.logo-image {
+  width: 50px;
+  height: 50px;
+  background-image: url(/resources/images/logo.png);
+  background-size: cover;
+}
+
+.logo-title {
+  font-size: 50px;
+}
+
+/*  */
+
+nav {
+  display: flex;
+  gap: 20px;
+}
+
+nav a {
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+nav a:hover {
+  color: #ff6347; /* Цвет при наведении */
+}
+
+/* Стили для баннера */
+
+#banner {
+  position: relative;
+}
+
+#banner #banner-image {
+  height: 758px;
+  width: 100%;
+  background-image: url(/resources/images/banner.jpeg);
+  background-position: -75px -540px;
+  background-size: 1353px 2028px;
+  border-radius: 70px;
+}
+
+#banner-card {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  position: absolute;
+  top: 200px;
+  transform: translateX(50px);
+  
+  padding: 20px;
+  height: 350px;
+  width: 650px;
+  
+  border-radius: 10px;
+}
+
+#banner-card h2 {margin-bottom: 10px; font-size: 65px;}
+#banner-card p {font-size: 22px;}
+
+
+#banner-card button {
+  padding: 10px 20px;
+  height: 66px;
+  width: 180px;
+  
+  background-color: #292F36;
+  border: none;
+  border-radius: 18px;
+  color: white;
+  cursor: pointer;
+
+  transition: background-color 0.3s;
+}
+
+/* Стили для проекта */
+
+#project-view {display: flex; flex-direction: column; gap: 93px;}
+
+#project-gallery {display: grid; grid-template-columns: repeat(2, 1fr); column-gap: 100px; row-gap: 56px;}
+
+.project-card {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  overflow: hidden;
+  position: relative;
+  border-radius: 10px;
+}
+
+.project-card-preview {height: 550px;}
+
+.project-card-details {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 70px;
+}
+
+.project-card-name { margin: 0 0 10px; font-size: 25px; }
+.project-card-category { text-decoration: none; }
+
+.project-card-menu-button {
+  position: absolute;  bottom: 0px; right: 0px;
+  
+  padding: 0px;
+  height: 70px;
+  width: 70px;
+  cursor: pointer;
+  
+}
+
+/* Стили для статистики */
+
+#statistics {
+  display: flex;
+  align-items: center;
+  
+  margin: 20px 0;
+  height: 460px;
+  width: 100%;
+  
+  background-color: #F4F0EC;
+}
+
+.stat-item {
+  flex: 1;
+  text-align: center;
+  
+  margin: 0 10px;
+  padding: 20px;
+  height: 155px;
+  
+  border-radius: 10px;
+}
+
+.stat-value {
+  display: block;
+  color: #CDA274;
+  font-size: 85px;
+  font-weight: bold;
+}
+
+.stat-description {
+  color: #777;
+  font-size: 16px;
+}
+
+/*  */
+
+#footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+
+  margin-top: 33px;
+  height: 390px;
+}
+
+#footer > * {
+  display: flex;
+  flex-direction: column;
+  width: 260px;
+}
+
+.footer-header {font-size: 25px;}
+.sitemap {gap: 25px;}
+.sitemap-nav {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+.contacts {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* articles */
+
+.articles {
+  display: flex;
+  flex-direction: column;
+  gap: 52px;
+}
+
+.articles-catalog {
+  display: flex;
+  flex-direction: row;
+  gap: 27px;
+}
+
+.articles-sample{
+  display: flex;
+  flex-direction: column;
+  gap: 21px;
+  padding: 21px;
+  height: 520px;
+  width: 2382px; 
+
+  border: 1px solid #e7e7e7;
+  border-radius: 62px;
+  box-shadow: 0 10px 30px 0 rgba(255, 255, 255, 0.25);
+}
+.articles-sample:nth-child(even){background: #f4f0ec;}
+.articles-sample:nth-child(even) .button-go {background-image: url(/src/assets/images/button-go-invert.png); }
+.articles-sample-preview{
+  position: relative;
+  width: 340px;
+  height: 289px;
+  background: #eaeaea;
+  border-radius: 45px 45px 0 0;
+}
+.articles-sample-category {
+  position: absolute; 
+  bottom: 20px; 
+  left: 20px;
+
+  padding: 5px;
+  height: 41px;
+  width: 124px;
+
+  background: #fff;
+  border-radius: 8px 8px 8px 0;
+  font-size: 16px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.articles-sample-details {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  position: relative;
+}
+.articles-sample-caption {font-size: 25px;}
+.articles-sample-stats {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.articles-sample-datestamp {font-size: 16px;}

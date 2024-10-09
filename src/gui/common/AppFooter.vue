@@ -1,0 +1,34 @@
+<script setup>
+
+</script>
+
+<template>
+  <footer id="footer" class="content">
+    <div id="social-networks">
+      <div class="logo-container">
+        <div class="logo-image"></div>
+        <span class="logo-title">Interno</span>
+      </div>
+    </div>
+    <div class="sitemap">
+      <h5 class="footer-header">Страницы</h5>
+      <nav class="sitemap-nav">
+        <a href="#">Домой</a>
+        <a href="#">Проект</a>
+        <a href="#">Блог</a>
+      </nav>
+    </div>
+    <div class="contacts">
+      <h5 class="footer-header">Контакты</h5>
+      <span>
+        55 East Birchwood Ave.<br />
+        Brooklyn, New York 11201
+      </span>
+      <span>contact@interno.com</span>
+      <span>(123) 456 - 7890</span>
+    </div>
+  </footer>
+</template>
+
+<style scoped>
+</style>
