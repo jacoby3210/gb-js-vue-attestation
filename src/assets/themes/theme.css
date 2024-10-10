@@ -55,13 +55,55 @@ h5{font-size: 22px;}
 h6{font-size: 20px;}
 /* p {font-size: 18px;} */
 /* p {font-size: 20px;} */
-p {font-size: 22px;}
-
-q {
-  background: var(--color-second-2);
-  border-radius: 50px; padding: 57px 227px; width: 799px; height: 298px;
+p {
+  font-size: 22px; line-height: 150%;
+  font-weight: 400;
+  font-size: 22px;
+  line-height: 150%;
+  letter-spacing: 0.01em;
 }
 
+ol, ul {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  margin: 0px 60px 0px 25px;
+}
+
+li {
+  font-family: var(--font-family);
+  font-weight: 400;
+  font-size: 22px;
+  line-height: 150%;
+  letter-spacing: 0.01em;
+  color: #4d5053;
+}
+li::marker {
+  color: var(--color-main)
+}
+
+q {
+  white-space: pre-wrap;
+  padding: 53px 227px;
+  padding: 57px 227px; 
+  width: 100%;
+
+  background: var(--color-second-2);
+  border-radius: 50px; 
+  color: var(--color-main);
+  font-size: 25px;
+  letter-spacing: 0.02em;
+  line-height: 125%;
+  text-align: center;
+}
+q::after {
+  content: "";
+}
+q::before {
+  content: "\“\A"; font-size: 150px;
+  position: relative;
+  top: 30%;
+}
 
 
 .button-go {
@@ -143,32 +185,7 @@ nav a:hover {color: #ff6347; /* Цвет при наведении */}
 
 /* blog */
 
-#blog-banner {
-  position: relative;
-  height: 452px;
-}
 
-#blog-banner-card {
-  position: absolute;
-  bottom: 0px;
-  left: 50%;
-  text-align: center;
-
-  padding: 41px;
-  height: 274px;
-  width: 500px;
-  
-  transform: translateX(-50%);
-  background-color: white;
-  border-radius: 37px;
-}
-
-#blog-banner-card p {height: 66px; line-height: 66px;}
-
-#blog-banner-image {
-  height: 356px;
-  background-image: url(/resources/images/blog-banner-image.png);
-}
 
 /* app classes */
 

@@ -18,18 +18,17 @@
 <script setup>
   
   import Banner from './components/Banner.vue';
-  import ArticleCatalog from './components/ArticleCatalog.vue'
-  import ArticleSample from './components/ArticleSample.vue';
+  import PostCatalog from './components/PostCatalog.vue'
+  import PostSample from './components/PostSample.vue';
 
 </script>
 
 <template>
 
-  <main id="blog">
+  <main id="blog" >
     <Banner/>
-    <ArticleSample :article="articles.at(0)"/>
-    <ArticleCatalog :count="count" :from="from" />
-
+    <PostSample :article="articles.at(0)"/>
+    <PostCatalog :count="count" :from="from" />
   </main>
 
 </template>

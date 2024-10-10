@@ -6,13 +6,18 @@ export default {
   computed: {
     ...mapState(['articles'])
   },
-  props: {
-    count: {
-      default: 4,
-      type: Number,
+  methods: {
+    goToArticle(id) {
+      this.$router.push(`/blog/article/${id}`); // Перенаправляем пользователя на страницу статьи
     },
+  },
+  props: {
     from: {
       default: 1,
+      type: Number,
+    },
+    to: {
+      default: 7,
       type: Number,
     },
   },
@@ -30,7 +35,7 @@ export default {
       </p>
     </div>
     <div class="articles-catalog">
-      <div class="articles-sample" v-for="article in articles.slice(from, count)" :key="article.id">
+      <div class="articles-sample" v-for="article in articles.slice(from, to)" :key="article.id">
         <div class="articles-sample-preview">
           <img :alt="'Превью ' + article.title" :src="article.image" />
           <div class="articles-sample-category">{{article.category}}</div>
@@ -39,7 +44,7 @@ export default {
           <a href="#" class="articles-sample-caption">{{ article.title }}</a>
           <div class="stats articles-sample-stats">
             <span class="stats-datestamp articles-sample-datestamp">{{ article.datestamp }}</span>
-            <button class="stats-button button-go articles-sample-menu-button"></button>
+            <button class="stats-button button-go articles-sample-menu-button" @click="goToArticle(article.id)"></button>
           </div>
         </div>
       </div>

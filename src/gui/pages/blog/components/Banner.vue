@@ -22,7 +22,7 @@
 
   .blog-banner-image {
     height: 356px;
-    background-image: url(/resources/images/blog-banner-image.png);
+    background-image: url(/resources/images/banner-blog.png);
   }
 
   .blog-banner-info {

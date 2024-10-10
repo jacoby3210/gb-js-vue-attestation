@@ -6,6 +6,16 @@ export default {
   computed: {
     ...mapState(['projects'])
   },
+  props: {
+    from: {
+      default: 0,
+      type: Number,
+    },
+    to: {
+      default: 7,
+      type: Number,
+    },
+  },
 }
 
 </script>
@@ -22,7 +32,7 @@ export default {
     <div class="project-view">
       <div
         class="project-sample"
-        v-for="project in projects"
+        v-for="project in projects.slice(from, to)"
         :key="project.id"
       >
         <img
