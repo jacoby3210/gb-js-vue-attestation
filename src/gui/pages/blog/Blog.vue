@@ -1,8 +1,6 @@
-<script>
-  
+<script >
+
   import { mapState, mapActions } from 'vuex';
-  import ArticleCatalog from './components/ArticleCatalog.vue'
-  import ArticleSample from './components/ArticleSample.vue';
   export default {
     computed: {
       ...mapState(['articles', 'projects', 'statistics'])
@@ -17,16 +15,18 @@
 
 </script>
 
+<script setup>
+  
+  import Banner from './components/Banner.vue';
+  import ArticleCatalog from './components/ArticleCatalog.vue'
+  import ArticleSample from './components/ArticleSample.vue';
+
+</script>
+
 <template>
 
   <main id="blog">
-    <div id="blog-banner" class="content">
-      <div id="blog-banner-image"></div>
-      <div id="blog-banner-card">
-        <h2>Статьи & Новости</h2>
-        <p>Домой / Блог</p>
-      </div>
-    </div>
+    <Banner/>
     <ArticleSample :article="articles.at(0)"/>
     <ArticleCatalog :count="count" :from="from" />
 
@@ -34,6 +34,5 @@
 
 </template>
   
-
 <style scoped>
 </style>

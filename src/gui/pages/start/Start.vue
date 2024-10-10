@@ -1,10 +1,10 @@
-<script>
+<script setup>
 
-import { mapState, mapActions } from 'vuex';
 import ArticleCatalog from '/src/gui/pages/blog/components/ArticleCatalog.vue'
+import Banner         from './components/Banner.vue'
 import ProjectCatalog from './components/ProjectCatalog.vue';
-import Stats from './components/Stats.vue';
-import Banner from './components/Banner.vue'
+import Stats          from './components/Stats.vue';
+
 </script>
 
 <template>
