@@ -4,7 +4,6 @@ export default {
   props: {
     article: {
       default: "",
-      type: Text,
     },
   },
 

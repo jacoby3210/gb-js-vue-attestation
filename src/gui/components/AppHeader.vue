@@ -10,7 +10,7 @@
     </div>
     <nav id="main-nav">
       <router-link to="/">Домой</router-link>
-      <router-link to="/">Проект</router-link>
+      <router-link to="/">Проекты</router-link>
       <router-link to="/blog">Блог</router-link>
     </nav>
   </header>

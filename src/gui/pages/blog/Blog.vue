@@ -2,24 +2,31 @@
 
   import { mapState, mapActions } from 'vuex';
   export default {
+    components: {Paginator,},
     computed: {
-      ...mapState(['articles', 'projects', 'statistics'])
+      ...mapState(['articles']),
+      articlesOnPage() {
+        const start = (this.currentPage - 1) * this.itemsPerPage;
+        const end = start + this.itemsPerPage;
+        return this.articles.slice(start + 1 , end + 1);
+      },
+      totalPages() {return Math.ceil(this.articles.length / this.itemsPerPage);},
     },
     data() {
       return {
-        count: 7,
-        from: 1,
+        currentPage: 1,
+        itemsPerPage: 6,
       };
-    }
+    },
   }
 
 </script>
 
 <script setup>
-  
-  import Banner from './components/Banner.vue';
-  import PostCatalog from './components/PostCatalog.vue'
-  import PostSample from './components/PostSample.vue';
+  import Paginator    from '../../components/Paginator.vue';
+  import Banner       from './components/Banner.vue';
+  import PostCatalog  from './components/PostCatalog.vue'
+  import PostSample   from './components/PostSample.vue';
 
 </script>
 
@@ -28,7 +35,11 @@
   <main id="blog" >
     <Banner/>
     <PostSample :article="articles.at(0)"/>
-    <PostCatalog :count="count" :from="from" />
+    <PostCatalog :articles="articlesOnPage" />
+    <Paginator 
+      :totalPages="totalPages"
+      v-model="currentPage"
+    />
   </main>
 
 </template>

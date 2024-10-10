@@ -1,24 +1,16 @@
 
 <script>
 
-import { mapState, mapActions } from 'vuex';
 export default {
-  computed: {
-    ...mapState(['articles'])
-  },
   methods: {
     goToArticle(id) {
       this.$router.push(`/blog/article/${id}`); // Перенаправляем пользователя на страницу статьи
     },
   },
   props: {
-    from: {
-      default: 1,
-      type: Number,
-    },
-    to: {
-      default: 7,
-      type: Number,
+    articles: {
+      type: Array,
+      required: true,
     },
   },
 }
@@ -35,7 +27,7 @@ export default {
       </p>
     </div>
     <div class="articles-catalog">
-      <div class="articles-sample" v-for="article in articles.slice(from, to)" :key="article.id">
+      <div class="articles-sample" v-for="article in articles" :key="article.id">
         <div class="articles-sample-preview">
           <img :alt="'Превью ' + article.title" :src="article.image" />
           <div class="articles-sample-category">{{article.category}}</div>

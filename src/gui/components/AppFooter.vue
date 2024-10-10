@@ -13,9 +13,9 @@
     <div class="sitemap">
       <h5 class="footer-header">Страницы</h5>
       <nav class="sitemap-nav">
-        <a href="#">Домой</a>
-        <a href="#">Проект</a>
-        <a href="#">Блог</a>
+        <router-link to="/">Домой</router-link>
+        <router-link to="/">Проекты</router-link>
+        <router-link to="/blog">Блог</router-link>
       </nav>
     </div>
     <div class="contacts">

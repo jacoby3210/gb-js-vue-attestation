@@ -1,9 +1,32 @@
+<script >
+
+  import { mapState, mapActions } from 'vuex';
+  export default {
+    computed: {
+      ...mapState(['articles']),
+      articlesOnPage() {
+        const start = (this.currentPage - 1) * this.itemsPerPage;
+        const end = start + this.itemsPerPage;
+        return this.articles.slice(start + 1 , end + 1);
+      },
+      totalPages() {return Math.ceil(this.articles.length / this.itemsPerPage);},
+    },
+    data() {
+      return {
+        currentPage: 1,
+        itemsPerPage: 6,
+      };
+    },
+  }
+
+</script>
+
 <script setup>
 
-import PostCatalog from '/src/gui/pages/blog/components/PostCatalog.vue'
-import Banner         from './components/Banner.vue'
-import ProjectCatalog from './components/ProjectCatalog.vue';
-import Stats          from './components/Stats.vue';
+import PostCatalog      from '/src/gui/pages/blog/components/PostCatalog.vue'
+import Banner           from './components/Banner.vue'
+import ProjectCatalog   from './components/ProjectCatalog.vue';
+import Stats            from './components/Stats.vue';
 
 </script>
 
@@ -12,7 +35,7 @@ import Stats          from './components/Stats.vue';
     <Banner/>
     <ProjectCatalog/>
     <Stats/>
-    <PostCatalog :from="1" />
+    <PostCatalog :articles="articlesOnPage" />
   </main>
 </template>
 
