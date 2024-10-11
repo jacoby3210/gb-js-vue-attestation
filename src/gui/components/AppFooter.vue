@@ -14,7 +14,7 @@
       <h5 class="footer-header">Страницы</h5>
       <nav class="sitemap-nav">
         <router-link to="/">Домой</router-link>
-        <router-link to="/">Проекты</router-link>
+        <router-link to="/projects">Проекты</router-link>
         <router-link to="/blog">Блог</router-link>
       </nav>
     </div>

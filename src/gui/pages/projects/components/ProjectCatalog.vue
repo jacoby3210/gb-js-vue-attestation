@@ -1,19 +1,16 @@
 <script>
 
 import { mapState, mapActions } from 'vuex';
-
 export default {
-  computed: {
-    ...mapState(['projects'])
+  methods: {
+    goToArticle(id) {
+      this.$router.push(`/blog/projects/${id}`); // Перенаправляем пользователя на страницу статьи
+    },
   },
   props: {
-    from: {
-      default: 0,
-      type: Number,
-    },
-    to: {
-      default: 7,
-      type: Number,
+    projects: {
+      type: Array,
+      required: true,
     },
   },
 }
@@ -32,7 +29,7 @@ export default {
     <div class="project-view">
       <div
         class="project-sample"
-        v-for="project in projects.slice(from, to)"
+        v-for="project in projects"
         :key="project.id"
       >
         <img
@@ -57,9 +54,17 @@ export default {
 </template>
 
 <style scoped>
-  .project-catalog {display: flex; flex-direction: column; gap: 93px;}
-
-  .project-view {display: grid; grid-template-columns: repeat(2, 1fr); column-gap: 100px; row-gap: 56px;}
+  .project-catalog {
+    display: flex; 
+    flex-direction: column; 
+    gap: 93px;
+  }
+  .project-view {
+    display: grid; 
+    grid-template-columns: repeat(2, 1fr); 
+    column-gap: 100px; 
+    row-gap: 56px;
+  }
 
   .project-sample {
     display: flex;

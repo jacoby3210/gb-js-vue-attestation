@@ -23,8 +23,9 @@
 </script>
 
 <script setup>
+
+  import Banner       from '../../components/Banner.vue';
   import Paginator    from '../../components/Paginator.vue';
-  import Banner       from './components/Banner.vue';
   import PostCatalog  from './components/PostCatalog.vue'
   import PostSample   from './components/PostSample.vue';
 
@@ -33,7 +34,7 @@
 <template>
 
   <main id="blog" >
-    <Banner/>
+    <Banner caption="Статьи & Новости" category="Домой / Блог" image="banner-blog"/>
     <PostSample :article="articles.at(0)"/>
     <PostCatalog :articles="articlesOnPage" />
     <Paginator 

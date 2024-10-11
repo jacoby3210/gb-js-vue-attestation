@@ -33,10 +33,10 @@
 </script>
 
 <script setup>
-  import Error from '/src/gui/pages/error/Error.vue'
-  import Banner from './components/Banner.vue';
-  import Content from './components/Content.vue';
-  import TagCloud from './components/TagCloud.vue';
+  import Error      from '/src/gui/pages/error/Error.vue'
+  import Banner     from '/src/gui/components/Banner.vue';
+  import Content    from './components/Content.vue';
+  import TagCloud   from './components/TagCloud.vue';
 </script>
 
 <template>

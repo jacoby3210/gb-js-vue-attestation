@@ -3,7 +3,7 @@
   import { mapState, mapActions } from 'vuex';
   export default {
     computed: {
-      ...mapState(['articles']),
+      ...mapState(['articles', 'projects']),
       articlesOnPage() {
         const start = (this.currentPage - 1) * this.itemsPerPage;
         const end = start + this.itemsPerPage;
@@ -14,7 +14,7 @@
     data() {
       return {
         currentPage: 1,
-        itemsPerPage: 6,
+        itemsPerPage: 3,
       };
     },
   }
@@ -23,19 +23,19 @@
 
 <script setup>
 
-import PostCatalog      from '/src/gui/pages/blog/components/PostCatalog.vue'
-import Banner           from './components/Banner.vue'
-import ProjectCatalog   from './components/ProjectCatalog.vue';
-import Stats            from './components/Stats.vue';
+  import PostCatalog      from '/src/gui/pages/blog/components/PostCatalog.vue'
+  import ProjectCatalog   from '/src/gui/pages/projects/components/ProjectCatalog.vue';
+  import Banner           from './components/Banner.vue'
+  import Stats            from './components/Stats.vue';
 
 </script>
 
 <template>
   <main>
     <Banner/>
-    <ProjectCatalog/>
+    <ProjectCatalog :projects="projects.slice(0, 4)"/>
     <Stats/>
-    <PostCatalog :articles="articlesOnPage" />
+    <PostCatalog :articles="articles.slice(1, 4)" />
   </main>
 </template>
 
