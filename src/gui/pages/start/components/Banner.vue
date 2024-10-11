@@ -1,5 +1,9 @@
 <script>
-
+export default {
+  methods: {
+    goToProjects(id) {this.$router.push(`/projects`);}
+  }
+};
 </script>
 
 <template>
@@ -11,7 +15,9 @@
         Существует много вариаций Lorem Ipsum, <br />
         которые можно использовать
       </p>
-      <button><span>Начать</span><span class="button-arrow"></span></button>
+      <button @click="goToProjects()">
+        <span>Начать</span>
+        <span class="button-arrow"></span></button>
     </div>
   </div>
 </template>
