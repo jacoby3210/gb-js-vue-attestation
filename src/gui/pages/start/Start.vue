@@ -2,21 +2,7 @@
 
   import { mapState, mapActions } from 'vuex';
   export default {
-    computed: {
-      ...mapState(['articles', 'projects']),
-      articlesOnPage() {
-        const start = (this.currentPage - 1) * this.itemsPerPage;
-        const end = start + this.itemsPerPage;
-        return this.articles.slice(start + 1 , end + 1);
-      },
-      totalPages() {return Math.ceil(this.articles.length / this.itemsPerPage);},
-    },
-    data() {
-      return {
-        currentPage: 1,
-        itemsPerPage: 3,
-      };
-    },
+    computed: {...mapState(['articles', 'projects']),},
   }
 
 </script>

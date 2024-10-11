@@ -41,7 +41,7 @@
 
 <template>
   <main class="blog-details" v-if="article">
-    <Banner/>
+    <Banner caption="" category="" image="banner-blog-details"/>
     <div class="blog-details-article content" >
       <Content :article="article"/>
       <TagCloud/>
@@ -51,5 +51,6 @@
 </template>
   
 <style scoped>
+  .blog-banner-info{display: none;}
   .blog-details-article {display: flex; flex-direction: row; gap: 52px;}
 </style>

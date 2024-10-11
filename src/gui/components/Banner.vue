@@ -21,7 +21,7 @@
 
   <div class="blog-banner">
     <img class="blog-banner-image " :src="`/resources/images/${image}.png`" />
-    <div class="blog-banner-info">
+    <div class="blog-banner-info" v-if="caption.length!=0">
       <h2>{{ caption }}</h2>
       <p>{{ category }}</p>
     </div>
