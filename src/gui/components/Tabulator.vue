@@ -63,11 +63,12 @@
   button {
     justify-content: center;
     transition: background-color 0.3s;
-    
+
     padding: 10px;
 
     background-color: transparent;
     border: none;
+    border-radius: 18px;
     color: black;
     cursor: pointer;
   }

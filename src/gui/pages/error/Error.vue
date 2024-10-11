@@ -10,7 +10,7 @@
       <p>Приносим извинения, но <br/>страница, которую вы искали, не найдена</p>
       <button><span>Домой</span><span class="button-arrow"></span></button>
     </div>
-    <img src="/resources/images/error.png"/>
+    <img src="/images/error.png"/>
   </main>
 </template>
 

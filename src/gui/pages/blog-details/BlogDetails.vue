@@ -14,7 +14,7 @@
     methods: {
       async fetchArticle(id) {
         // try {
-        axios.get(`/resources/data/articles/${id}/index.html`, { cache: 'no-cache' })
+        axios.get(`/data/articles/${id}/index.html`, { cache: 'no-cache' })
         .then(response => {
           if (response && response.headers.get('Content-Type') !== 'text/html') {
             this.article = response.data;
