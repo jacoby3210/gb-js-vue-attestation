@@ -3,6 +3,11 @@
 <script>
 
 export default {
+  methods: {
+    goToArticle(id) {
+      this.$router.push(`/blog/article/${id}`); // Перенаправляем пользователя на страницу статьи
+    },
+  },
   props: {
     article: {
       default: {},
@@ -23,7 +28,7 @@ export default {
         <p>{{ article.text }}</p>
         <div class="stats article-content-stats">
           <span class="stats-datestamp article-content-stats-datestamp">{{ article.datestamp }}</span>
-          <button class="button-go stats-button article-content-stats-button"></button>
+          <button class="button-go stats-button article-content-stats-button" @click="goToArticle(article.id)"></button>
         </div>
     </div>
     </div>
