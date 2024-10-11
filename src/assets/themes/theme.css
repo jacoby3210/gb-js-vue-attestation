@@ -126,7 +126,7 @@ q::before {
 }
 
 .content {padding:  0px 350px;}
-.content-header {
+.content-caption {
   display: flex; 
   flex-direction: column; 
   text-align: center; 

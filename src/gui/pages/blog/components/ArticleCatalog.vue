@@ -19,7 +19,7 @@ export default {
 
 <template>
   <div id="news-and-articles" class="content article-catalog">
-    <div class="content-header project-header">
+    <div class="content-caption project-header">
       <h3>Статьи & Новости</h3>
       <p>
         Хорошо известно, что читатель будет отвлекаться <br />
