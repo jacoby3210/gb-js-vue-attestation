@@ -9,7 +9,7 @@
 
 <script setup>
 
-  import PostCatalog      from '/src/gui/pages/blog/components/PostCatalog.vue'
+  import ArticleCatalog   from '/src/gui/pages/blog/components/ArticleCatalog.vue'
   import ProjectCatalog   from '/src/gui/pages/projects/components/ProjectCatalog.vue';
   import Banner           from './components/Banner.vue'
   import Stats            from './components/Stats.vue';
@@ -21,7 +21,7 @@
     <Banner/>
     <ProjectCatalog :projects="projects.slice(0, 4)"/>
     <Stats/>
-    <PostCatalog :articles="articles.slice(1, 4)" />
+    <ArticleCatalog :articles="articles.slice(1, 4)" />
   </main>
 </template>
 

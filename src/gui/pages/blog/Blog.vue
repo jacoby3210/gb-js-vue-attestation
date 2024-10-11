@@ -24,10 +24,10 @@
 
 <script setup>
 
-  import Banner       from '/src/gui/components/common/Banner.vue';
-  import Paginator    from '/src/gui/components/common/Paginator.vue';
-  import PostCatalog  from './components/PostCatalog.vue'
-  import PostSample   from './components/PostSample.vue';
+  import Banner          from '/src/gui/components/common/Banner.vue';
+  import Paginator       from '/src/gui/components/common/Paginator.vue';
+  import ArticleCatalog  from './components/ArticleCatalog.vue'
+  import ArticleSample   from './components/ArticleSample.vue';
 
 </script>
 
@@ -35,12 +35,9 @@
 
   <main id="blog" >
     <Banner caption="Статьи & Новости" category="Домой / Блог" image="banner-blog"/>
-    <PostSample :article="articles.at(0)"/>
-    <PostCatalog :articles="articlesOnPage" />
-    <Paginator 
-      :totalPages="totalPages"
-      v-model="currentPage"
-    />
+    <ArticleSample :article="articles.at(0)"/>
+    <ArticleCatalog :articles="articlesOnPage" />
+    <Paginator :totalPages="totalPages" v-model="currentPage"/>
   </main>
 
 </template>
