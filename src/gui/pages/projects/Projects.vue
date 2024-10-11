@@ -25,9 +25,9 @@
 
 <script setup>
 
-  import Banner       from '../../components/Banner.vue';
-  import Paginator    from '../../components/Paginator.vue';
-  import Tabulator    from '../../components/Tabulator.vue'
+  import Banner       from '/src/gui/components/common/Banner.vue';
+  import Paginator    from '/src/gui/components/common/Paginator.vue';
+  import Tabulator    from '/src/gui/components/common/Tabulator.vue'
   import ProjectCatalog   from './components/ProjectCatalog.vue';
 
 </script>

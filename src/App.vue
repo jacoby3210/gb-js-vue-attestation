@@ -1,12 +1,12 @@
 <script setup>
-  import AppHeader from './gui/components/AppHeader.vue'
-  import AppFooter from './gui/components/AppFooter.vue'
+  import Header from './gui/components/app/header.vue'
+  import Footer from './gui/components/app/footer.vue'
   import '../src/assets/themes/theme.css';
 
 </script>
 
 <template>
-  <AppHeader/>
+  <Header/>
   <router-view></router-view>
-  <AppFooter/>
+  <Footer/>
 </template>

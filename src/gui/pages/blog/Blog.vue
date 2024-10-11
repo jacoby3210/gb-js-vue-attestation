@@ -24,8 +24,8 @@
 
 <script setup>
 
-  import Banner       from '../../components/Banner.vue';
-  import Paginator    from '../../components/Paginator.vue';
+  import Banner       from '/src/gui/components/common/Banner.vue';
+  import Paginator    from '/src/gui/components/common/Paginator.vue';
   import PostCatalog  from './components/PostCatalog.vue'
   import PostSample   from './components/PostSample.vue';
 
