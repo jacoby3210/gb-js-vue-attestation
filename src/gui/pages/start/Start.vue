@@ -9,8 +9,8 @@
 
 <script setup>
 
-  import ArticleCatalog   from '/src/gui/pages/blog/components/ArticleCatalog.vue'
-  import ProjectCatalog   from '/src/gui/pages/projects/components/ProjectCatalog.vue';
+  import ArticleList      from '/src/gui/pages/blog-catalog/components/ArticleList.vue'
+  import ProjectList      from '/src/gui/pages/project-catalog/components/ProjectList.vue';
   import Banner           from './components/Banner.vue'
   import Stats            from './components/Stats.vue';
 
@@ -19,9 +19,9 @@
 <template>
   <main>
     <Banner/>
-    <ProjectCatalog :projects="projects.slice(0, 4)"/>
+    <ProjectList :projects="projects.slice(0, 4)"/>
     <Stats/>
-    <ArticleCatalog :articles="articles.slice(1, 4)" />
+    <ArticleList :articles="articles.slice(1, 4)" />
   </main>
 </template>
 

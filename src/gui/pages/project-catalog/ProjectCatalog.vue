@@ -28,7 +28,7 @@
   import Banner           from '/src/gui/components/common/Banner.vue';
   import Paginator        from '/src/gui/components/common/Paginator.vue';
   import Tabulator        from '/src/gui/components/common/Tabulator.vue'
-  import ProjectCatalog   from './components/ProjectCatalog.vue';
+  import ProjectList      from './components/ProjectList.vue';
 
 </script>
 
@@ -37,7 +37,7 @@
   <main id="blog" >
     <Banner caption="Наши проекты" category="Домой / Проект" image="banner-projects"/>
     <Tabulator :tabs="tabs" v-model:currentTab="currentTab"/>
-    <ProjectCatalog :projects="projectsOnPage"/>
+    <ProjectList :projects="projectsOnPage"/>
     <Paginator :totalPages="totalPages" v-model="currentPage" />
   </main>
 

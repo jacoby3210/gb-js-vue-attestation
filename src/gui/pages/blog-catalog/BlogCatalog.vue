@@ -26,17 +26,17 @@
 
   import Banner          from '/src/gui/components/common/Banner.vue';
   import Paginator       from '/src/gui/components/common/Paginator.vue';
-  import ArticleCatalog  from './components/ArticleCatalog.vue'
+  import ArticleList     from './components/ArticleList.vue'
   import ArticleSample   from './components/ArticleSample.vue';
 
 </script>
 
 <template>
 
-  <main id="blog" >
+  <main id="blog" class="blog-catalog">
     <Banner caption="Статьи & Новости" category="Домой / Блог" image="banner-blog"/>
     <ArticleSample :article="articles.at(0)"/>
-    <ArticleCatalog :articles="articlesOnPage" />
+    <ArticleList :articles="articlesOnPage" />
     <Paginator :totalPages="totalPages" v-model="currentPage"/>
   </main>
 

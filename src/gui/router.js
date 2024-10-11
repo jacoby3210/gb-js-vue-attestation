@@ -1,16 +1,16 @@
 import { createRouter, createWebHistory } from 'vue-router';
-import Blog from './pages/blog/Blog.vue';
+import BlogCatalog from './pages/blog-catalog/BlogCatalog.vue';
 import BlogDetails from './pages/blog-details/BlogDetails.vue';
-import Projects from './pages/projects/Projects.vue'
+import ProjectCatalog from './pages/project-catalog/ProjectCatalog.vue'
 import Error from './pages/error/Error.vue';
 import Start from './pages/start/Start.vue';
 
 const routes = [
-  {component: Blog, name: 'Blog', path: '/blog',},
-  {component: BlogDetails, name: 'Article', path: '/blog/article/:id',},
+  {component: BlogCatalog, name: 'BlogCatalog', path: '/blog',},
+  {component: BlogDetails, name: 'BlogDetails', path: '/blog/article/:id',},
   {component: Error, name: 'Error', path: '/:pathMatch(.*)*',},
-  {component: Projects, name: 'Projects', path: '/projects',},
-  {component: Start, name: 'Home', path: '/',},
+  {component: ProjectCatalog, name: 'ProjectCatalog', path: '/projects',},
+  {component: Start, name: 'Start', path: '/',},
 ];
 const router = createRouter({
   history: createWebHistory(), 
