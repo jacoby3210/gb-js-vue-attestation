@@ -155,44 +155,6 @@ nav {display: flex; gap: 20px;}
 nav a {text-decoration: none; transition: color 0.3s;}
 nav a:hover {color: #ff6347; /* Цвет при наведении */}
 
-/* Стили для баннера */
-
-#banner {position: relative;}
-
-#banner #banner-image {
-  height: 758px;
-  width: 100%;
-  background-image: url(/images/banner.jpeg);
-  background-position: -75px -540px;
-  background-size: 1353px 2028px;
-  border-radius: 70px;
-}
-
-#banner-card {
-  display: flex;
-  flex-direction: column;
-  gap: 18px;
-  position: absolute;
-  top: 200px;
-  transform: translateX(50px);
-  
-  padding: 20px;
-  height: 350px;
-  width: 650px;
-  
-  border-radius: 10px;
-}
-
-#banner-card h2 {margin-bottom: 10px; font-size: 65px;}
-#banner-card p {font-size: 22px;}
-
-#banner-card button {
-}
-
-/* blog */
-
-
-
 /* app classes */
 
 .contacts {

@@ -3,20 +3,14 @@
 import { mapState, mapActions } from 'vuex';
 
 export default {
-  computed: {
-    ...mapState(['statistics'])
-  },
+  computed: {...mapState(['statistics'])},
 }
 
 </script>
 
 <template>
-  <div id="statistics" class="content statistics">
-    <div
-      class="stat-item"
-      v-for="(stat, index) in statistics"
-      :key="index"
-    >
+  <div id="stats" class="content stats">
+    <div class="stat-item" :key="index" v-for="(stat, index) in statistics">
       <span class="stat-value">{{ stat.value }}</span>
       <span class="stat-description">{{ stat.description }}</span>
     </div>
@@ -25,7 +19,7 @@ export default {
 
 <style scoped>
 
-  .statistics {
+  .stats {
     display: flex;
     align-items: center;
     
