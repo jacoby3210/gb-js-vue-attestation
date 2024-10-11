@@ -73,7 +73,7 @@ export default {
     box-shadow: 0 10px 30px 0 rgba(255, 255, 255, 0.25);
   }
   .article-catalog-sample:nth-child(even){background: #f4f0ec;}
-  .article-catalog-sample:nth-child(even) .button-go {background-image: url(/src/assets/images/button-go-invert.png); }
+  .article-catalog-sample:nth-child(even) .button-go {background-image: url(/images/button-go-invert.png); }
   .article-catalog-sample:nth-child(3n+1) {clear: left;}
 
   .article-catalog-sample-preview{

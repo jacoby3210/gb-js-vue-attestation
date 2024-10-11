@@ -112,7 +112,7 @@ q::before {
   width: 70px;
 
   background-color: transparent;
-  background-image: url(/src/assets/images/button-go.png);
+  background-image: url(/images/button-go.png);
   background-size: 100%;
   border: none;
   border-radius: 5px;
