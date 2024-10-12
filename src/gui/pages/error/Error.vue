@@ -15,9 +15,27 @@
 </template>
 
 <style scoped>
-  .error{display: flex; flex-direction: row; align-items: center; gap: 81px; padding-right: 0px;}
-  .error-details {display: flex; flex-direction: column; gap:23px; width: 569px; }
-  img{width: 913px; ;}
-  h1{color:var(--color-main); font-size: 250px;}
-  p{ font-size: 35px;}
+  .error {
+    display: flex; 
+    flex-direction: row; 
+    align-items: center; 
+    gap: 81px; 
+    padding-right: 0px;
+  }
+  .error-details {
+    display: flex; 
+    flex-direction: column; 
+    gap:23px; 
+    width: 569px; 
+  }
+  img { 
+    width: 913px;
+  }
+  h1 {
+    color:var(--color-main); 
+    font-size: 250px;
+  }
+  p { 
+    font-size: 35px;
+  }
 </style>

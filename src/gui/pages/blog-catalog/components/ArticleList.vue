@@ -4,7 +4,7 @@
 export default {
   methods: {
     goToArticle(id) {
-      this.$router.push(`/blog/article/${id}`); // Перенаправляем пользователя на страницу статьи
+      this.$router.push(`/blog/${id}`); // Перенаправляем пользователя на страницу статьи
     },
   },
   props: {
@@ -20,7 +20,7 @@ export default {
 <template>
   <div id="news-and-articles" class="content article-list">
     <div class="content-caption project-header">
-      <h3>Статьи & Новости</h3>
+      <h2>Статьи & Новости</h2>
       <p>
         Хорошо известно, что читатель будет отвлекаться <br />
         на читабельный контент страницы
@@ -33,7 +33,7 @@ export default {
           <div class="article-list-sample-category">{{article.category}}</div>
         </div>
         <div class="article-list-sample-info">
-          <a href="#" class="article-list-sample-info-caption">{{ article.title }}</a>
+          <h4 class="article-list-sample-info-caption">{{ article.title }}</h4>
           <div class="stats article-list-sample-info-stats">
             <span class="stats-datestamp article-list-sample-info-datestamp">{{ article.datestamp }}</span>
             <button class="stats-button button-go article-list-sample-menu-button" @click="goToArticle(article.id)"></button>

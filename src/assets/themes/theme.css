@@ -10,15 +10,27 @@ body{
   --color-main: #CDA274;
   --color-second: #292F36;
   --color-second-2: #F4F0EC;
-  font-family: "DM Serif Display", sans-serif;
+
+  --font-family: "Jost", sans-serif;
+  --second-family: "DM Serif Display", sans-serif;
+  --third-family: "Font Awesome 5 Brands", sans-serif;
+
   background-color: white;
   color: #333;
 }
 
-a {color:black; text-decoration: none; }
+a {
+  color: #4d5053;
+  font-family: var(--font-family);
+  font-size: 22px;
+  font-weight: 400;
+  letter-spacing: 0.01em;
+  line-height: 150%;
+  text-decoration: none; 
+}
 a:hover { color: inherit;  text-decoration:underline; }
 
-button{
+button {
   display: flex;  
   flex-direction: row;
   align-items: center;
@@ -33,7 +45,12 @@ button{
   border-radius: 18px;
   color: white;
   cursor: pointer;
+
+  font-family: var(--font-family);
+  font-weight: 600;
   font-size: 18px;
+  line-height: 125%;
+  letter-spacing: 0.02em;
 }
 button:hover {background-color:var(--color-main);}
 .button-arrow {
@@ -45,20 +62,47 @@ button:hover {background-color:var(--color-main);}
 button:hover .button-arrow {
   background-image: url(/images/arrow-hover.svg);
 }
-h1{font-size: 85px;}
-h2{font-size: 50px;}
-h3{font-size: 35px;}
-h4{font-size: 25px;}
-h5{font-size: 22px;}
-h6{font-size: 20px;}
-/* p {font-size: 18px;} */
-/* p {font-size: 20px;} */
-p {
-  font-size: 22px; line-height: 150%;
+
+h1 {
+  font-family: var(--font-family); 
   font-weight: 400;
+  font-size: 65px;
+  line-height: 125%;
+  color: #292f36;
+}
+
+h2 {
+  font-family: var(--second-family);
+  font-weight: 400;
+  font-size: 50px;
+  line-height: 125%;
+  letter-spacing: 0.02em;
+  text-align: center;
+  color: #292f36;
+}
+
+h3 {
+  font-size: 35px;
+}
+
+h4 {
+  color: #292f36;
+  font-family: var(--second-family);
+  font-size: 25px;
+  font-weight: 400;
+  letter-spacing: 0.02em;
+  line-height: 125%;
+}
+h5 {font-size: 22px;}
+h6 {font-size: 20px;}
+
+p {
+  font-family: var(--font-family);
   font-size: 22px;
+  font-weight: 400;
   line-height: 150%;
   letter-spacing: 0.01em;
+  color: #4d5053;
 }
 
 ol, ul {
@@ -125,7 +169,11 @@ q::before {
   background-color: transparent;
 }
 
-.content {padding:  0px 350px;}
+.content {
+  padding:  0px 350px; 
+  width: 100%;
+}
+
 .content-caption {
   display: flex; 
   flex-direction: column; 
@@ -191,6 +239,13 @@ nav a:hover {color: #ff6347; /* Цвет при наведении */}
   justify-content: space-between;
   align-items: center;
 }
-.stats-datestamp {font-size: 16px;}
 
-
+.stats-datestamp {
+  color: #4d5053;
+  font-family: var(--font-family);
+  font-size: 16px;
+  font-weight: 400;
+  letter-spacing: 0.01em;
+  line-height: 150%;
+  text-transform: capitalize;
+}

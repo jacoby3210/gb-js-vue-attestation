@@ -59,5 +59,6 @@
     flex-direction: row; 
     gap: 52px;
   }
+  h2{text-align: left;}
 
 </style>

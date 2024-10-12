@@ -24,7 +24,6 @@ export default {
   
 <style scoped>
   .source {
-    width: 804px; 
     min-height: 300px; 
     display: flex; 
     flex-direction: column; 

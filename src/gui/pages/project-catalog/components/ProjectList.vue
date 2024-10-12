@@ -4,7 +4,7 @@ import { mapState, mapActions } from 'vuex';
 export default {
   methods: {
     goToProject(id) {
-      this.$router.push(`/blog/projects/${id}`); // Перенаправляем пользователя на страницу статьи
+      this.$router.push(`/projects/${id}`); // Перенаправляем пользователя на страницу статьи
     },
   },
   props: {
@@ -17,7 +17,7 @@ export default {
 <template>
   <div class="content project-list">
     <div class="content-caption project-list-caption">
-      <h3>Следите за нашими проектами</h3>
+      <h2>Следите за нашими проектами</h2>
       <p>
         Хорошо известно, что читатель будет отвлекаться <br />
         на читабельный контент страницы
@@ -35,10 +35,8 @@ export default {
           :alt="'Превью ' + project.name"
         />
         <div class="project-list-sample-details">
-          <h5 class="project-list-sample-name">{{ project.name }}</h5>
-          <a href="#" class="project-list-sample-category">
-            {{ project.category }}
-            </a>
+          <h4 class="project-list-sample-name">{{ project.name }}</h4>
+          <a href="#" class="project-list-sample-category">{{project.category}}</a>
           <button
             class="button-go project-list-sample-menu-button "
             @click="goToProject(project.id)"
@@ -51,11 +49,13 @@ export default {
 </template>
 
 <style scoped>
+
   .project-list {
     display: flex; 
     flex-direction: column; 
     gap: 93px;
   }
+
   .project-list-content {
     display: grid; 
     grid-template-columns: repeat(2, 1fr); 

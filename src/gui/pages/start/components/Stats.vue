@@ -11,8 +11,8 @@ export default {
 <template>
   <div id="stats" class="content stats">
     <div class="stat-item" :key="index" v-for="(stat, index) in statistics">
-      <span class="stat-value">{{ stat.value }}</span>
-      <span class="stat-description">{{ stat.description }}</span>
+      <p class="stat-value">{{ stat.value }}</p>
+      <p class="stat-description">{{ stat.description }}</p>
     </div>
   </div>
 </template>
@@ -41,6 +41,14 @@ export default {
     border-radius: 10px;
   }
 
-  .stat-value {display: block; color: #CDA274; font-size: 85px; font-weight: bold;}
+  .stat-value {
+    display: block; 
+    color: var(--color-main); 
+    font-family: var(--second-family);
+    font-weight: 400;
+    font-size: 85px;
+    line-height: 125%;
+    letter-spacing: 0.02em;
+  }
   .stat-description {color: #777; font-size: 16px;}
 </style>

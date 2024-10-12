@@ -35,7 +35,7 @@
 <template>
 
   <main id="blog" >
-    <Banner caption="Наши проекты" category="Домой / Проект" image="banner-projects"/>
+    <Banner caption="Наши проекты" category="Домой / Проект" image="banner-project-details.png"/>
     <Tabulator :tabs="tabs" v-model:currentTab="currentTab"/>
     <ProjectList :projects="projectsOnPage"/>
     <Paginator :totalPages="totalPages" v-model="currentPage" />

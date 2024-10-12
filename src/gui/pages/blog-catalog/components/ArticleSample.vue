@@ -4,9 +4,7 @@
 
 export default {
   methods: {
-    goToArticle(id) {
-      this.$router.push(`/blog/article/${id}`); // Перенаправляем пользователя на страницу статьи
-    },
+    goToArticle(id) {this.$router.push(`/blog/${id}`);},
   },
   props: {
     article: {
@@ -20,7 +18,7 @@ export default {
 
 <template>
   <div class="content article-sample">
-    <h3 class="article-sample-caption">{{ article.title }}</h3>
+    <h2 class="article-sample-caption">{{ article.title }}</h2>
     <div class="article-sample-content">
       <img class="article-sample-content-image" :alt="'Превью ' + article.title" :src="article.image" />
       <div class="article-sample-content-info">

@@ -10,7 +10,7 @@ export default {
   <div id="banner" class="content banner">
     <div class="banner-image"></div>
     <div class="banner-info">
-      <h2>Пусть ваш дом будет уникальным</h2>
+      <h1>Пусть ваш дом <br />будет уникальным</h1>
       <p>
         Существует много вариаций Lorem Ipsum, <br />
         которые можно использовать
@@ -49,8 +49,6 @@ export default {
       
     border-radius: 10px;
   }
-
-  .banner-info h2 {margin-bottom: 10px; font-size: 65px;}
 
   .banner-info-button {}
 

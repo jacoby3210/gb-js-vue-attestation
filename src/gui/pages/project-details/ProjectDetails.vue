@@ -1,15 +1,36 @@
 <script>
 
-export default {
-  props: {
-    project: {
-      default: "",
-      required: true,
-      type: String,
-    },
-  },
-};
+import axios from "axios";
 
+export default {
+  data() {
+    return {
+      project: null,
+      projectId: null,
+    };
+  },
+  mounted() {
+    this.projectId = this.$route.params.id;
+    this.fetchProject(this.projectId);
+  },
+  methods: {
+    async fetchProject(id) {
+      return axios.get(`/data/projects/${id}/index.html`, { cache: 'no-cache' })
+        .then(response => {
+          if (response && response.headers.get('Content-Type') !== 'text/html') {
+            this.project = response.data;
+            console.log(`Файл существует.`);
+          } else {
+            console.log(`Файл не найден. `, response.ok, response.headers.get('Content-Type'));
+            this.project = false;
+          }
+        })
+        .catch(error => {
+          console.error(`Ошибка при загрузке статьи: ${error}`);
+        });
+      },
+    },
+  };
 </script>
 
 <script setup>
@@ -23,11 +44,22 @@ export default {
 <template>
   <main class="project-details" v-if="project">
     <Banner caption="" category="" image="banner-project-details"/>
-    <Source :source="project"/>
+    <Source :source="project" class="content project-details-content"/>
   </main>
   <Error v-if="project===false"/>
 </template>
 
 <style scoped>
-  .project-details-content {width: 804px; min-height: 300px; display: flex; flex-direction: column; gap:21px;}
+  .project-details-content {
+    min-height: 300px; 
+    display: flex; 
+    flex-direction: column; 
+    gap:21px;
+    justify-content: center;
+    align-items: center;
+  }
+  .project-details-content > *:not(img) {
+    width: 700px;
+  }
+
 </style>
