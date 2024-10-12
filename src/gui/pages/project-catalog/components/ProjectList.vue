@@ -35,7 +35,7 @@ export default {
           :alt="'Превью ' + project.name"
         />
         <div class="project-list-sample-details">
-          <h4 class="project-list-sample-name">{{ project.name }}</h4>
+          <h3 class="project-list-sample-name">{{ project.name }}</h3>
           <a href="#" class="project-list-sample-category">{{project.category}}</a>
           <button
             class="button-go project-list-sample-menu-button "

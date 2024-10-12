@@ -11,9 +11,9 @@
       </div>
     </div>
     <div class="sitemap footer-sitemap">
-      <h4 class="sitemap-header footer-header footer-sitemap-header">
+      <h3 class="sitemap-header footer-header footer-sitemap-header">
         Страницы
-      </h4>
+      </h3>
       <nav class="sitemap-nav footer-sitemap-nav">
         <router-link to="/">Домой</router-link>
         <router-link to="/projects">Проекты</router-link>
@@ -21,7 +21,7 @@
       </nav>
     </div>
     <div class="footer-contacts">
-      <h4 class="footer-header footer-contacts-header">Контакты</h4>
+      <h3 class="footer-header footer-contacts-header">Контакты</h3>
       <span class="footer-contacts-line">55 East Birchwood Ave.</span>
       <span class="footer-contacts-line"> Brooklyn, New York 11201</span>
       <span class="footer-contacts-line">contact@interno.com</span>

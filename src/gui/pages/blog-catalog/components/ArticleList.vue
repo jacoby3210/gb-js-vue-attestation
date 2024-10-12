@@ -33,7 +33,7 @@ export default {
           <div class="article-list-sample-category">{{article.category}}</div>
         </div>
         <div class="article-list-sample-info">
-          <h4 class="article-list-sample-info-caption">{{ article.title }}</h4>
+          <h3 class="article-list-sample-info-caption">{{ article.title }}</h3>
           <div class="stats article-list-sample-info-stats">
             <span class="stats-datestamp article-list-sample-info-datestamp">{{ article.datestamp }}</span>
             <button class="stats-button button-go article-list-sample-menu-button" @click="goToArticle(article.id)"></button>
