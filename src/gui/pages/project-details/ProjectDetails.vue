@@ -15,17 +15,18 @@ export default {
   },
   methods: {
     async fetchProject(id) {
-      return axios.get(`/data/projects/${id}/index.html`, { cache: 'no-cache' })
-        .then(response => {
+      return axios.get(
+        `${import.meta.env.BASE_URL}/data/projects/${id}/index.html`, 
+        { cache: 'no-cache' }
+      ).then(response => {
           if (response && response.headers.get('Content-Type') !== 'text/html') {
             this.project = response.data;
             console.log(`Файл существует.`);
           } else {
-            console.log(`Файл не найден. `, response.ok, response.headers.get('Content-Type'));
+            console.log(`Файл не найден. `);
             this.project = false;
           }
-        })
-        .catch(error => {
+       }).catch(error => {
           console.error(`Ошибка при загрузке статьи: ${error}`);
         });
       },

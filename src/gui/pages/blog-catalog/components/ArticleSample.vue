@@ -22,7 +22,7 @@ export default {
     <div class="article-sample-content">
       <img class="article-sample-content-image" :alt="'Превью ' + article.title" :src="article.image" />
       <div class="article-sample-content-info">
-        <h4>{{ article.subtitle }}</h4>
+        <h3>{{ article.subtitle }}</h3>
         <p>{{ article.text }}</p>
         <div class="stats article-content-stats">
           <span class="stats-datestamp article-content-stats-datestamp">{{ article.datestamp }}</span>

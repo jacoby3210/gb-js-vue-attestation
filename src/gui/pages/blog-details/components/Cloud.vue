@@ -20,7 +20,7 @@ export default {
 
 <template>
   <div class="cloud">
-    <h4>Теги</h4>
+    <h3>Теги</h3>
     <span
       class="cloud-tag"
       :key="index"
@@ -38,7 +38,7 @@ export default {
     height: min-content; width:345px; 
   }
 
-  .cloud h4 {width: 100%;}
+  .cloud h3 {width: 100%;}
   .cloud-tag {
     padding: 9px 30px;
     height: 41px;

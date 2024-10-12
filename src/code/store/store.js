@@ -52,16 +52,9 @@ export default createStore({
     ],
   },
   mutations: {
-    increment(state) {
-      state.count++;
-    }
   },
   actions: {
-    increment({ commit }) {
-      commit('increment');
-    }
   },
   getters: {
-    count: state => state.count
   }
 });
