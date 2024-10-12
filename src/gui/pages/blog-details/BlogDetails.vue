@@ -35,9 +35,9 @@
 <script setup>
 
   import Banner     from '/src/gui/components/common/Banner.vue';
+  import Source     from '/src/gui/components/common/Source.vue';
   import Error      from '/src/gui/pages/error/Error.vue'
   import Cloud      from './components/Cloud.vue';
-  import Content    from './components/Content.vue';
 
 </script>
 
@@ -45,7 +45,7 @@
   <main class="blog-details" v-if="article">
     <Banner caption="" category="" image="banner-blog-details"/>
     <div class="content blog-details-article" >
-      <Content :article="article"/>
+      <Source :source="article"/>
       <Cloud :articleId="articleId"/>
     </div>
   </main>
