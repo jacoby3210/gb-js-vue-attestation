@@ -1,6 +1,6 @@
 <script>
 
-import axios from "axios";
+import { mapActions } from 'vuex';
 
 export default {
   data() {
@@ -9,29 +9,16 @@ export default {
       projectId: null,
     };
   },
+  methods: {
+    ...mapActions(['loadContent']),
+  },
   mounted() {
     this.projectId = this.$route.params.id;
-    this.fetchProject(this.projectId);
+    this.loadContent({id: this.projectId, folder: 'projects'})
+      .then(rs => this.project = rs);
   },
-  methods: {
-    async fetchProject(id) {
-      return axios.get(
-        `${import.meta.env.BASE_URL}/data/projects/${id}/index.html`, 
-        { cache: 'no-cache' }
-      ).then(response => {
-          if (response && response.headers.get('Content-Type') !== 'text/html') {
-            this.project = response.data;
-            console.log(`Файл существует.`);
-          } else {
-            console.log(`Файл не найден. `);
-            this.project = false;
-          }
-       }).catch(error => {
-          console.error(`Ошибка при загрузке статьи: ${error}`);
-        });
-      },
-    },
-  };
+}
+
 </script>
 
 <script setup>

@@ -33,9 +33,10 @@ export default {
 </template>
   
 <style scoped>
-  .cloud{
+  .cloud {
     display: flex; flex-wrap: wrap; gap:11px;
-    height: min-content; width:345px; 
+    height: min-content; 
+    min-width:345px; 
   }
 
   .cloud h3 {width: 100%;}

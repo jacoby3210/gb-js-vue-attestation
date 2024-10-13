@@ -1,4 +1,5 @@
 // src/store/index.js
+import axios from "axios";
 import { createStore } from 'vuex';
 
 export default createStore({
@@ -54,6 +55,28 @@ export default createStore({
   mutations: {
   },
   actions: {
+    async loadContent(self,  {folder, id}){
+      // return 
+      return axios.get(
+          `${import.meta.env.BASE_URL}data/${folder}/${id}/index.html`, 
+          { cache: 'no-cache' }
+        ).then(
+          response => {
+            if (response && response.headers.get('Content-Type') !== 'text/html') {
+              console.log(`Файл существует.`);
+              return response.data;
+            } else {
+              console.log(`Файл не найден. `);
+              return false;
+            }
+          }
+      ).catch(
+        error => {
+          console.error(`Ошибка при загрузке статьи: ${error}`);
+          return false;
+        }
+      );
+    },
   },
   getters: {
   }

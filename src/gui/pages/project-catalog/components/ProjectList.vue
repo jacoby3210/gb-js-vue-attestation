@@ -4,7 +4,7 @@ import { mapState, mapActions } from 'vuex';
 export default {
   methods: {
     goToProject(id) {
-      this.$router.push(`/projects/${id}`); // Перенаправляем пользователя на страницу статьи
+      this.$router.push(`projects/${id}`); // Перенаправляем пользователя на страницу статьи
     },
   },
   props: {

@@ -1,5 +1,5 @@
 <script >
-  import axios from "axios";
+  import { mapActions } from 'vuex';
 
   export default {
     data() {
@@ -8,28 +8,14 @@
         articleId: null,
       };
     },
+    methods: {
+      ...mapActions(['loadContent']),
+    },
     mounted() {
       this.articleId = this.$route.params.id;
-      this.fetchArticle(this.articleId);
+      this.loadContent({id: this.articleId, folder: 'articles'})
+        .then(rs => this.article = rs);
     },
-    methods: {
-      async fetchArticle(id) {
-        return axios.get(
-          `${import.meta.env.BASE_URL}/data/articles/${id}/index.html`, 
-          { cache: 'no-cache' }
-        ).then(response => {
-            if (response && response.headers.get('Content-Type') !== 'text/html') {
-              this.article = response.data;
-              console.log(`Файл существует.`);
-            } else {
-              console.log(`Файл не найден. `);
-              this.article = false;
-            }
-        }).catch(error => {
-            console.error(`Ошибка при загрузке статьи: ${error}`);
-          });
-        },
-      },
   };
 </script>
 
