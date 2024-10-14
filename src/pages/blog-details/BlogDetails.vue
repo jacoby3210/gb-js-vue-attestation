@@ -4,7 +4,7 @@
   export default {
     data() {
       return {
-        article: null,
+        contentMain: null,
         articleId: null,
       };
     },
@@ -13,8 +13,9 @@
     },
     mounted() {
       this.articleId = this.$route.params.id;
-      this.loadContent({id: this.articleId, folder: 'articles'})
-        .then(rs => this.article = rs);
+    const localPath = `articles/${this.articleId}/content.html`
+      this.loadContent({localPath})
+        .then(rs => this.contentMain = rs);
     },
   };
 
@@ -30,14 +31,14 @@
 </script>
 
 <template>
-  <main class="blog-details" v-if="article">
+  <main class="blog-details" v-if="contentMain">
     <Banner caption="" category="" image="banner-blog-details"/>
     <div class="content blog-details-article" >
-      <Source :source="article"/>
+      <Source :source="contentMain"/>
       <Cloud :articleId="articleId"/>
     </div>
   </main>
-  <Error v-if="article===false"/>
+  <Error v-if="contentMain===false"/>
 </template>
   
 <style scoped>

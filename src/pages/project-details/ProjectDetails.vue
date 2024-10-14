@@ -5,8 +5,9 @@ import { mapActions } from 'vuex';
 export default {
   data() {
     return {
-      project: null,
       projectId: null,
+      contentMain: null,
+      contentSlider: null
     };
   },
   methods: {
@@ -14,8 +15,11 @@ export default {
   },
   mounted() {
     this.projectId = this.$route.params.id;
-    this.loadContent({id: this.projectId, folder: 'projects'})
-      .then(rs => this.project = rs);
+    const localPath = `projects/${this.projectId}/content.html`
+    const localPath2 = `projects/${this.projectId}/slider.html`
+    this.loadContent({localPath}).then(rs => this.contentMain = rs);
+    this.loadContent({localPath: localPath2})
+      .then(rs => this.contentSlider = rs);
   },
 }
 
@@ -24,20 +28,23 @@ export default {
 <script setup>
 
   import Banner     from '/src/gui/components/Banner.vue'
+  import Slider     from '/src/gui/components/Slider.vue';
   import Source     from '/src/gui/components/Source.vue';
   import Error      from '/src/pages/error/Error.vue'
 
 </script>
 
 <template>
-  <main class="project-details" v-if="project">
+  <main class="project-details" v-if="contentMain">
     <Banner caption="" category="" image="banner-project-details"/>
-    <Source :source="project" class="content project-details-content"/>
+    <Source :source="contentMain" class="content project-details-content"/>
+    <Slider :content="contentSlider" class="content" v-if="contentSlider"/>
   </main>
   <Error v-if="project===false"/>
 </template>
 
 <style scoped>
+
   .project-details-content {
     min-height: 300px; 
     display: flex; 
@@ -46,6 +53,7 @@ export default {
     justify-content: center;
     align-items: center;
   }
+
   .project-details-content > *:not(img) {
     width: 700px;
   }
