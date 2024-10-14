@@ -1,4 +1,5 @@
 <script >
+  
   export default {
     data() {
       return {
@@ -13,6 +14,7 @@
       image:    {default: "", required: true, type: String,},
     },
   }
+
 </script>
 
 <script setup>
@@ -21,7 +23,7 @@
 <template>
 
   <div class="blog-banner">
-    <img class="blog-banner-image " :src="`${this.prefix}images/${image}.png`" />
+    <img class="blog-banner-image " :src="`${this.prefix}/images/${image}.png`" />
     <div class="blog-banner-info" v-if="caption.length!=0">
       <h2>{{ caption }}</h2>
       <p>{{ category }}</p>

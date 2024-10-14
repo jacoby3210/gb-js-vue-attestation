@@ -24,8 +24,8 @@
 
 <script setup>
 
-  import Banner          from '/src/gui/components/common/Banner.vue';
-  import Paginator       from '/src/gui/components/common/Paginator.vue';
+  import Banner          from '/src/gui/components/Banner.vue';
+  import Paginator       from '/src/gui/components/Paginator.vue';
   import ArticleList     from './components/ArticleList.vue'
   import ArticleSample   from './components/ArticleSample.vue';
 

@@ -9,9 +9,9 @@
 
 <script setup>
 
-  import ArticleList      from '/src/gui/pages/blog-catalog/components/ArticleList.vue'
-  import ProjectList      from '/src/gui/pages/project-catalog/components/ProjectList.vue';
-  import Banner           from './components/Banner.vue'
+  import ArticleList      from '/src/pages/blog-catalog/components/ArticleList.vue'
+  import ProjectList      from '/src/pages/project-catalog/components/ProjectList.vue';
+  import Banner            from './components/Banner.vue';
   import Stats            from './components/Stats.vue';
 
 </script>

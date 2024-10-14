@@ -23,9 +23,9 @@ export default {
 
 <script setup>
 
-  import Banner     from '/src/gui/components/common/Banner.vue';
-  import Source     from '/src/gui/components/common/Source.vue';
-  import Error      from '/src/gui/pages/error/Error.vue'
+  import Banner     from '/src/gui/components/Banner.vue'
+  import Source     from '/src/gui/components/Source.vue';
+  import Error      from '/src/pages/error/Error.vue'
 
 </script>
 

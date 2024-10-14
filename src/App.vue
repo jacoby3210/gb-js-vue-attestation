@@ -1,6 +1,7 @@
 <script setup>
-  import Header from './gui/components/app/header.vue'
-  import Footer from './gui/components/app/footer.vue'
+
+  import Header from '/src/gui/layouts/header.vue'
+  import Footer from '/src/gui/layouts/footer.vue'
   import '../src/assets/themes/theme.css';
 
 </script>
