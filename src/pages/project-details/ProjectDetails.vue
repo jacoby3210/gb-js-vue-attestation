@@ -15,10 +15,11 @@ export default {
   },
   mounted() {
     this.projectId = this.$route.params.id;
-    const localPath = `projects/${this.projectId}/content.html`
-    const localPath2 = `projects/${this.projectId}/slider.html`
-    this.loadContent({localPath}).then(rs => this.contentMain = rs);
-    this.loadContent({localPath: localPath2})
+    const localPathContent = `projects/${this.projectId}/content.html`
+    const localPathSlider = `projects/${this.projectId}/slider.html`
+    this.loadContent({localPath: localPathContent})
+      .then(rs => this.contentMain = rs);
+    this.loadContent({localPath: localPathSlider})
       .then(rs => this.contentSlider = rs);
   },
 }
@@ -40,7 +41,7 @@ export default {
     <Source :source="contentMain" class="content project-details-content"/>
     <Slider :content="contentSlider" class="content" v-if="contentSlider"/>
   </main>
-  <Error v-if="project===false"/>
+  <Error v-if="contentMain===false"/>
 </template>
 
 <style scoped>

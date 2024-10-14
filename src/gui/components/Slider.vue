@@ -24,9 +24,9 @@ export default {
     currentIndex(newIndex, oldIndex) {
       const images = document.querySelectorAll('.slider-content img');
       images.forEach((img, index) => {
-        console.log( this.currentIndex, newIndex, index, index == newIndex,  index == newIndex ? 'block' : 'none')
-        img.style.display = index == newIndex ? 'block' : 'none'; 
-        console.log(img.style.display)
+        const isCurrent = index ===  newIndex;
+        img.style.display = isCurrent ? 'block' : 'none'; 
+        img.style.opacity = isCurrent ? '1.0' : '0.0'; 
       });
     },
   },
@@ -34,8 +34,9 @@ export default {
     this.$nextTick(() => {
       const images = document.querySelectorAll('.slider-content img');
       images.forEach((img, index) => {
-        img.style.display = index ===  this.currentIndex ? 'block' : 'none'; 
-        console.log(img.style.display)
+        const isCurrent = index ===  this.currentIndex;
+        img.style.display = isCurrent ? 'block' : 'none'; 
+        img.style.opacity = isCurrent ? '1.0' : '0.0'; 
       });
     });
   },
