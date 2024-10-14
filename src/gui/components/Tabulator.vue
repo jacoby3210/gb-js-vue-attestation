@@ -40,6 +40,9 @@
         this.$emit("update:currentTab", this.currentTabIndex); // Отправляем событие при смене вкладки
       },
     },
+    mounted() {
+      this.selectTab(this.currentTabIndex);
+    }
   };
 </script>
 
